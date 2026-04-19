@@ -1,0 +1,119 @@
+# -----------------------------
+
+# 🔷 Python
+
+# -----------------------------
+
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Virtual environments
+
+venv/
+env/
+ENV/
+.venv/
+
+# Distribution / packaging
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+
+*.log
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# Environment variables
+
+.env
+.env.*
+
+# -----------------------------
+
+# 🔷 Node.js / Full Stack
+
+# -----------------------------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build folders
+
+build/
+dist/
+.next/
+out/
+
+# Dependency directories
+
+.pnpm-store/
+
+# -----------------------------
+
+# 🔷 Frontend (React/Vite)
+
+# -----------------------------
+
+.vite/
+.cache/
+
+# -----------------------------
+
+# 🔷 IDE / Editor
+
+# -----------------------------
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -----------------------------
+
+# 🔷 OS Files
+
+# -----------------------------
+
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+
+# 🔷 Testing / Coverage
+
+# -----------------------------
+
+coverage/
+htmlcov/
+.pytest_cache/
+
+# -----------------------------
+
+# 🔷 Database / Local files
+
+# -----------------------------
+
+*.sqlite3
+*.db
+
+# -----------------------------
+
+# 🔷 Misc
+
+# -----------------------------
+
+*.bak
+*.tmp
+ 
