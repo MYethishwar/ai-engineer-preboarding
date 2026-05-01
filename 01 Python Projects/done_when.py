@@ -6,7 +6,7 @@ with open("data.json", "r") as file:
 filtered_trips = []
 
 for trip in trips:
-    if trip["price"] > 4000:
+    if trip["price"] < 4000:
         filtered_trips.append(trip)
 
 print("Filtered Trips:")

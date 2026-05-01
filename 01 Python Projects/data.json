@@ -1,5 +1,9 @@
 [
-  { "name": "Trip to Goa", "price": 5000 },
-  { "name": "Trip to Ooty", "price": 3000 },
-  { "name": "Trip to Manali", "price": 7000 }
+  { "name": "Trip to Goa", "price": 5000, "days": 3, "rating": 4.5 },
+  { "name": "Trip to Ooty", "price": 3000, "days": 2, "rating": 4.2 },
+  { "name": "Trip to Manali", "price": 7000, "days": 5, "rating": 4.8 },
+  { "name": "Trip to Kerala", "price": 6500, "days": 4, "rating": 4.6 },
+  { "name": "Trip to Jaipur", "price": 4000, "days": 3, "rating": 4.3 },
+  { "name": "Trip to Ladakh", "price": 12000, "days": 6, "rating": 4.9 },
+  { "name": "Trip to Andaman", "price": 15000, "days": 5, "rating": 4.7 }
 ]
