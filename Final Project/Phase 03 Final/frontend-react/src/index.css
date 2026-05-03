@@ -1,0 +1,4 @@
+/* these 3 lines import all Tailwind styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

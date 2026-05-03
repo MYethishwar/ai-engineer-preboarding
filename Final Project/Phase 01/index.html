@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>✈ Travel Journal</h1>
+      <p>Phase 0 — Vanilla JS</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <h2>Add a new trip</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="inp-location">Location</label>
+          <input type="text" id="inp-location" placeholder="e.g. Kyoto, Japan" />
+        </div>
+        <div class="form-group">
+          <label for="inp-date">Date</label>
+          <input type="date" id="inp-date" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inp-desc">Description</label>
+        <textarea id="inp-desc" rows="3" placeholder="What did you experience?"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button id="btn-add">+ Add Trip</button>
+        <span id="status-msg"></span>
+      </div>
+    </div>
+
+    <!-- TRIP LIST -->
+    <div class="section-header">
+      <h2>My Trips</h2>
+      <span id="count-badge">0 trips</span>
+    </div>
+
+    <div id="empty-state">No trips yet. Add your first destination above.</div>
+    <div id="trip-list"></div>
+
+  </div>
+
+  <!-- Link JS file at the bottom -->
+  <script src="app.js"></script>
+</body>
+</html>

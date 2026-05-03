@@ -1,0 +1,19 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.link.active {
+  font-weight: bold;
+  color: #38bdf8;
+}

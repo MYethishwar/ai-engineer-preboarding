@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Users App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+    
+
+        h2 {
+            color: #333;
+            font-size: 70px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 50px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #ea09ff;
+        }
+
+        #output {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 15px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            border-radius: 20%;
+            padding: 10px;
+            margin-bottom: 10px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Random Users APP</h2>
+    <h3>A web application that fetches and displays user profiles from a public API using Fetch API and DOM manipulation.</h3>
+
+    <button onclick="getUsers()">Get Users</button>
+
+    <div id="output">Click button on top to get random users here... this is the container defined before button click</div>
+
+    <script>
+        function getUsers() {
+
+            document.getElementById("output").innerHTML = "Loading...";
+
+            const url = "https://randomuser.me/api/?results=5";
+
+            fetch(url)
+                .then(response => response.json())  
+                .then(data => {
+
+                    let users = data.results;
+                    let result = "";
+
+                    for (let i = 0; i < users.length; i++) {
+
+                        result += "<div class='card'>";
+                        result += "<img src='" + users[i].picture.medium + "'>";
+                        result += "<p><b>" + users[i].name.first + " " + users[i].name.last + "</b></p>";
+                        result += "<p>" + users[i].email + "</p>";
+                        result += "</div>";
+                    }
+
+                    document.getElementById("output").innerHTML = result;
+                })
+                .catch(error => {
+                    document.getElementById("output").innerHTML = "Error loading data";
+                    console.log(error);
+                });
+        }
+    </script>
+
+</body>
+</html>
