@@ -1,5 +1,3 @@
-// Wishlist.js
-// Future destinations wishlist
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,12 +11,10 @@ function Wishlist() {
   const [whenPlanned, setWhenPlanned] = useState("");
   const navigate = useNavigate();
 
-  // fetch wishlist on load
   useEffect(() => {
     fetchWishlist();
   }, []);
 
-  // GET wishlist from FastAPI
   async function fetchWishlist() {
     try {
       const res = await fetch("http://localhost:8000/wishlist");
@@ -29,7 +25,6 @@ function Wishlist() {
     }
   }
 
-  // POST new wishlist item
   async function handleAdd() {
     if (!title || !location) {
       alert("Title and location required!");

@@ -1,6 +1,3 @@
-// JournalForm.js
-// Complete form for creating/editing a journal entry
-// Divided into sections for clarity
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +6,6 @@ import TravelersInput from "./TravelersInput";
 
 function JournalForm() {
 
-  // basic info
   const [title, setTitle]           = useState("");
   const [dateStart, setDateStart]   = useState("");
   const [dateEnd, setDateEnd]       = useState("");
@@ -17,32 +13,24 @@ function JournalForm() {
   const [description, setDescription] = useState("");
   const [numDays, setNumDays]       = useState("");
 
-  // expenses and money
   const [expenses, setExpenses]     = useState([]);
 
-  // experiences
   const [bestMoments, setBestMoments] = useState("");
   const [majorPlaces, setMajorPlaces] = useState("");
   const [challenges, setChallenges]   = useState("");
 
-  // travel details
   const [transportation, setTransportation] = useState("flight");
   const [tripType, setTripType]     = useState("friends");
 
-  // people
   const [travelers, setTravelers]   = useState([]);
-
-  // photos
   const [photoUrls, setPhotoUrls]   = useState([]);
   const [uploading, setUploading]   = useState(false);
 
-  // location coords for map
   const [latitude, setLatitude]     = useState("0");
   const [longitude, setLongitude]   = useState("0");
 
   const navigate = useNavigate();
 
-  // transportation options user can choose from
   const transportationOptions = [
     "flight",
     "train",
@@ -54,7 +42,6 @@ function JournalForm() {
     "mixed"
   ];
 
-  // trip type options
   const tripTypeOptions = [
     "solo",
     "friends",
@@ -64,7 +51,6 @@ function JournalForm() {
     "adventure"
   ];
 
-  // handle photo upload
   async function handlePhotoUpload(e) {
     const files = e.target.files;
     if (!files) return;
@@ -91,16 +77,13 @@ function JournalForm() {
     setUploading(false);
   }
 
-  // remove photo from list
   function removePhoto(index) {
     const updated = photoUrls.filter((_, i) => i !== index);
     setPhotoUrls(updated);
   }
 
-  // handle form submit
   async function handleSubmit() {
 
-    // validation
     if (!title || !dateStart || !location) {
       alert("Title, date, and location are required!");
       return;
@@ -111,19 +94,16 @@ function JournalForm() {
       return;
     }
 
-    // parse major places from string (comma separated)
     const placesArray = majorPlaces
       .split(",")
       .map(p => p.trim())
       .filter(p => p);
 
-    // parse challenges from string (comma separated)
     const challengesArray = challenges
       .split(",")
       .map(c => c.trim())
       .filter(c => c);
 
-    // build the journal entry object
     const entry = {
       title,
       date_start: dateStart,
@@ -142,8 +122,6 @@ function JournalForm() {
       latitude: parseFloat(latitude) || 0,
       longitude: parseFloat(longitude) || 0
     };
-
-    // POST to FastAPI
     try {
       const res = await fetch("http://localhost:8000/journals", {
         method: "POST",

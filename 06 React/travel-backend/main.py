@@ -4,7 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# ------------------ CORS ------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,7 +12,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ------------------ Models ------------------
 class Trip(BaseModel):
     id: int
     place: str
@@ -23,11 +21,9 @@ class User(BaseModel):
     name: str
     email: str
 
-# ------------------ Data Storage ------------------
 trips = []
 users = []
 
-# ------------------ GET ROUTES ------------------
 
 # 1. Get all trips
 @app.get("/trips")
@@ -48,7 +44,6 @@ def get_users():
     return users
 
 
-# ------------------ POST ROUTES ------------------
 
 # 1. Add a new trip
 @app.post("/trips")
@@ -67,8 +62,6 @@ def add_user(user: User):
 def add_multiple_trips(new_trips: list[Trip]):
     trips.extend(new_trips)
     return {"message": "Multiple trips added", "count": len(new_trips)}
-
-# ------------------ DELETE ROUTE ------------------
 
 @app.delete("/trips/{trip_id}")
 def delete_trip_by_id(trip_id: int):

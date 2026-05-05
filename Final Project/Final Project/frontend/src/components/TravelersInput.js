@@ -2,12 +2,9 @@
 import React, { useState } from "react";
 
 function TravelersInput({ travelers = [], onTravelersChange }) {
-
-  // local state for new traveler
   const [newName, setNewName]       = useState("");
   const [newRelation, setNewRelation] = useState("friend");
 
-  // relation options user can choose from
   const relationOptions = [
     "friend",
     "family",
@@ -19,7 +16,6 @@ function TravelersInput({ travelers = [], onTravelersChange }) {
     "other"
   ];
 
-  // add traveler
   function handleAdd() {
     if (!newName) {
       alert("Name required!");
@@ -31,7 +27,6 @@ function TravelersInput({ travelers = [], onTravelersChange }) {
       relation: newRelation
     };
 
-    // make sure travelers is an array before spreading
     const currentTravelers = Array.isArray(travelers) ? travelers : [];
     const updated = [...currentTravelers, newTraveler];
     onTravelersChange(updated);
@@ -39,15 +34,12 @@ function TravelersInput({ travelers = [], onTravelersChange }) {
     setNewName("");
     setNewRelation("friend");
   }
-
-  // remove traveler
   function handleRemove(index) {
     const currentTravelers = Array.isArray(travelers) ? travelers : [];
     const updated = currentTravelers.filter((_, i) => i !== index);
     onTravelersChange(updated);
   }
 
-  // make sure travelers is always an array
   const travelersArray = Array.isArray(travelers) ? travelers : [];
 
   return (

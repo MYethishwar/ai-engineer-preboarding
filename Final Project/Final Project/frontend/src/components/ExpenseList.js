@@ -1,13 +1,10 @@
-// ExpenseList.js
 import React, { useState } from "react";
 
 function ExpenseList({ expenses = [], onExpensesChange }) {
 
-  // local state for adding new expense
   const [newItem, setNewItem]       = useState("");
   const [newAmount, setNewAmount]   = useState("");
 
-  // add expense to list
   function handleAddExpense() {
     if (!newItem || !newAmount) {
       alert("Item and amount required!");
@@ -28,14 +25,12 @@ function ExpenseList({ expenses = [], onExpensesChange }) {
     setNewAmount("");
   }
 
-  // remove expense by index
   function handleRemove(index) {
     const currentExpenses = Array.isArray(expenses) ? expenses : [];
     const updated = currentExpenses.filter((_, i) => i !== index);
     onExpensesChange(updated);
   }
 
-  // calculate total
   const expensesArray = Array.isArray(expenses) ? expenses : [];
   const total = expensesArray.reduce((sum, exp) => sum + exp.amount, 0);
 
