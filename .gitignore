@@ -1,119 +1,137 @@
-# -----------------------------
+# =========================
+# Node Modules
+# =========================
+node_modules/
 
-# 🔷 Python
+# =========================
+# Build Folders
+# =========================
+dist/
+build/
+.next/
+out/
 
-# -----------------------------
-Week 2 Machine Learning/Dataset/household_power_consumption.txt
-**pycache**/
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# Python
+# =========================
+__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pyc
-*.so
+*.sqlite3
+*.db
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
-# Virtual environments
-
+# =========================
+# Virtual Environments
+# =========================
 venv/
 env/
 ENV/
 .venv/
 
-# Distribution / packaging
+# =========================
+# FastAPI / Uvicorn
+# =========================
+*.pid
+uvicorn.log
 
-build/
-dist/
-*.egg-info/
-.eggs/
-
-# Logs
-
-*.log
-
-# Jupyter Notebook
-
-.ipynb_checkpoints/
-
-# Environment variables
-
-.env
-.env.*
-
-# -----------------------------
-
-# 🔷 Node.js / Full Stack
-
-# -----------------------------
-
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build folders
-
-build/
-dist/
-.next/
-out/
-
-# Dependency directories
-
-.pnpm-store/
-
-# -----------------------------
-
-# 🔷 Frontend (React/Vite)
-
-# -----------------------------
-
-.vite/
+# =========================
+# Tailwind / Cache
+# =========================
 .cache/
+.parcel-cache/
 
-# -----------------------------
+# =========================
+# Vite
+# =========================
+vite.svg
 
-# 🔷 IDE / Editor
+# =========================
+# Docker
+# =========================
+.dockerignore
 
-# -----------------------------
-
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# -----------------------------
-
-# 🔷 OS Files
-
-# -----------------------------
-
+# =========================
+# OS Files
+# =========================
 .DS_Store
 Thumbs.db
 
-# -----------------------------
+# =========================
+# VS Code
+# =========================
+.vscode/
 
-# 🔷 Testing / Coverage
+# =========================
+# JetBrains IDEs
+# =========================
+.idea/
 
-# -----------------------------
-
-coverage/
-htmlcov/
-.pytest_cache/
-
-# -----------------------------
-
-# 🔷 Database / Local files
-
-# -----------------------------
-
-*.sqlite3
-*.db
-
-# -----------------------------
-
-# 🔷 Misc
-
-# -----------------------------
-
-*.bak
+# =========================
+# Temporary Files
+# =========================
+tmp/
+temp/
 *.tmp
- 
+
+# =========================
+# Coverage
+# =========================
+coverage/
+
+# =========================
+# Package Locks
+# Uncomment if needed
+# =========================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# Firebase
+# =========================
+.firebase/
+.firebaserc
+
+# =========================
+# Google Cloud
+# =========================
+.gcloud/
+gcloud-service-key.json
+
+# =========================
+# Secrets / Keys
+# =========================
+*.pem
+*.key
+*.crt
+secret.json
+
+# =========================
+# Mac System Files
+# =========================
+.AppleDouble
+.LSOverride
