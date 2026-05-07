@@ -1,5 +1,5 @@
 # ⚡ Energy Consumption Prediction Project
-
+![alt text](image.png)
 This project is basically an end-to-end machine learning workflow where I worked on predicting household energy usage using real-world data. The idea was to not just build a model, but understand the full pipeline — from raw data to deployment.
 
 ---
