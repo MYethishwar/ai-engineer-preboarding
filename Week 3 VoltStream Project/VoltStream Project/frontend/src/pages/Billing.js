@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import React from "react";
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function Billing() {
 
@@ -11,7 +14,7 @@ function Billing() {
 
   async function fetchBilling() {
     try {
-      const res = await fetch("http://localhost:8000/billing");
+      const res = await fetch(`${API_BASE_URL}/billing`);
       const json = await res.json();
       setData(json);
     } catch (err) {

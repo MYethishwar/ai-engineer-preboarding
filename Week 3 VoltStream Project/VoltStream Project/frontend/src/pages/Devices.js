@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import React from "react";
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 // Icon map
 const deviceIcons = {
@@ -21,7 +24,7 @@ function Devices() {
 
   async function fetchDevices() {
     try {
-      const res = await fetch("http://localhost:8000/devices");
+      const res = await fetch(`${API_BASE_URL}/devices`);
       const data = await res.json();
       setDevices(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -33,7 +36,7 @@ function Devices() {
 
   async function toggleDevice(id, currentStatus) {
     try {
-      await fetch(`http://localhost:8000/devices/${id}`, {
+        await fetch(`${API_BASE_URL}/devices/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: !currentStatus })

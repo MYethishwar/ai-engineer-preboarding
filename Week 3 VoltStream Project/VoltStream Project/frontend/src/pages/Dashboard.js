@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import React from "react";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 function Dashboard() {
 
   const [data, setData] = useState(null);
@@ -14,7 +16,7 @@ function Dashboard() {
 
   async function fetchDashboard() {
     try {
-      const res = await fetch("http://localhost:8000/dashboard");
+      const res = await fetch(`${API_BASE_URL}/dashboard`);
       const json = await res.json();
       setData(json);
     } catch (err) {
@@ -22,6 +24,9 @@ function Dashboard() {
     }
     setLoading(false);
   }
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+  console.log("API URL:", API_BASE_URL);
 
   if (loading) {
     return (

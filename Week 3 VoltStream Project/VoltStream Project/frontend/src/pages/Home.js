@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";     //page loads, state changes, component updates, component unmounts.
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Home() { 
 
-  const navigate = useNavigate();
+  const navigate = useNavigate();   //page navigation
   const [showSplash, setShowSplash] = useState(
   !sessionStorage.getItem("voltstreamSplashShown")
 );
