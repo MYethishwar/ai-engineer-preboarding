@@ -101,14 +101,10 @@ temp/
 # Coverage
 # =========================
 coverage/
-
-# =========================
-# Package Locks
-# Uncomment if needed
-# =========================
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+=========================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # =========================
 # Firebase
