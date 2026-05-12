@@ -57,7 +57,7 @@ The frontend handles everything users interact with in the browser such as pages
 The backend handles API requests, business logic, and data processing.
 
 It sends data to the frontend whenever users interact with the application.
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Project Structure
 
@@ -77,7 +77,7 @@ The frontend and backend work independently but communicate through API requests
 ---
 
 # Frontend Structure
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 The frontend is developed using React and Tailwind CSS.
 
 It contains different pages and reusable components that build the user interface.
@@ -152,7 +152,7 @@ Used for Firebase Hosting deployment configuration.
 ---
 
 # Backend Structure
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 The backend is developed using Python.
 
@@ -232,46 +232,46 @@ The frontend starts running in the browser using the React development server.
 
 # Opening Splash Page
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ---
 
 # Home Page
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ---
 
 # Terminologies Page
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 ---
 
 # Dashboard Page
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 ---
 
 # Analytics Page
 
-![alt text](image-7.png)
-![alt text](image-8.png)
+![alt text](images/image-7.png)
+![alt text](images/image-8.png)
 ---
 
 # Devices Page
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 ---
 
 # Billing Page
 
-![alt text](image-10.png)
-![alt text](image-11.png)
+![alt text](images/image-10.png)
+![alt text](images/image-11.png)
 ---
 
 # Backend Output
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 ---
 
 # Deployment Workflow
