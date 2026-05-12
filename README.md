@@ -86,10 +86,7 @@ AI-engineering/
 │   ├── README.md
 │   └── image.png
 │
-├── Week 3 VoltStream Project/
-│   │
-│   └── VoltStream Project/
-│       │
+├── VoltStream Application/
 │       ├── backend/
 │       │   ├── main.py
 │       │   ├── requirements.txt

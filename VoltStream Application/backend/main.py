@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 
-# ============ SETUP ============
 
 app = FastAPI(title="VoltStream API", version="1.0.0")
 
@@ -19,7 +18,6 @@ app.add_middleware(
 )
 
 
-# ============ MOCK DATA ============
 
 dashboard_data = {
     "grid_power_kw": 3.4,

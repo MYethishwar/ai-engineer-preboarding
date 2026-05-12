@@ -52,7 +52,32 @@ function Devices() {
       console.error("Error toggling device:", err);
     }
   }
+// async function addDevice(newDevice) {
 
+//   try {
+
+//     const res = await fetch(`${API_BASE_URL}/devices`, {
+
+//       method: "POST",
+
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+
+//       body: JSON.stringify(newDevice)
+
+//     });
+
+//     const addedDevice = await res.json();
+
+//     setDevices(prev => [...prev, addedDevice]);
+
+//   } catch (err) {
+
+// +    console.error("Error adding device:", err);
+
+//   }
+// }
   const activeDevices = devices.filter(d => d.status).length;
 
   const activePower = devices
